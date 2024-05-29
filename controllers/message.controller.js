@@ -7,7 +7,7 @@ const getReply = async (req, res) => {
 
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-    const prompt = message
+    const prompt = `${message}`
     const result = await model.generateContent(prompt);
     const response = result.response;
     const messageReply = response.text();

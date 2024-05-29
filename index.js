@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
+const PORT = 8000
 
 app.use(morgan('dev'))
 
@@ -21,6 +22,6 @@ app.use('/api',require('./routes/routes'))
 
 
 
-app.listen(8000,()=>{
-    console.log('server running')
+app.listen(PORT,()=>{
+    console.log('server running on ',PORT)
 })
